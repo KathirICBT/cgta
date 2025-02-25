@@ -15,7 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->foreignId('category_id')->constrained('event_categories')->onDelete('cascade');
+            
+            // Correct Foreign Key
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('event_categories')->onDelete('cascade');
+
             $table->enum('event_type', ['public', 'members_only']);
             $table->date('start_date');
             $table->time('start_time');

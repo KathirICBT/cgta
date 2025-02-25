@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('event_categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
+            $table->id(); // Creates UNSIGNED BIGINT (20)
+            $table->string('name', 191)->unique(); // Ensures compatibility with MySQL indexes
             $table->text('description')->nullable();
             $table->timestamps();
         });
