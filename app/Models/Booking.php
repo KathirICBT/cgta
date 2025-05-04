@@ -10,7 +10,7 @@ use App\Mail\EventBookingInvoiceMail;
 class Booking extends Model
 {
     use HasFactory;
-
+    // GIT TESTING
     protected $fillable = [
         'member_id', 'event_id', 'ticket_type_id', 'booking_date', 
         'tickets_count', 'subtotal_price', 'tax_percentage', 'tax_amount', 
