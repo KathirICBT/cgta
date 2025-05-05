@@ -8,7 +8,9 @@ use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\PackageController;
 use App\Http\Controllers\API\EventCategoryController;
 use App\Http\Controllers\API\PackageServiceController;
+use App\Http\Controllers\API\CompanyController;
 
+Route::apiResource('companies', CompanyController::class);
 Route::apiResource('package-services', PackageServiceController::class);
 Route::apiResource('event-categories', EventCategoryController::class);
 Route::apiResource('packages', PackageController::class);
