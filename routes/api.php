@@ -10,7 +10,11 @@ use App\Http\Controllers\API\EventCategoryController;
 use App\Http\Controllers\API\PackageServiceController;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\ClientCompanyEventController;
+use App\Http\Controllers\API\PrivacyLevelController;
+use App\Http\Controllers\API\MemberPrivacyController;
 
+Route::apiResource('member-privacy', MemberPrivacyController::class);
+Route::apiResource('privacy-levels', PrivacyLevelController::class);
 Route::apiResource('client-company-events', ClientCompanyEventController::class);
 Route::apiResource('companies', CompanyController::class);
 Route::apiResource('package-services', PackageServiceController::class);
