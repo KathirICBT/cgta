@@ -14,7 +14,9 @@ use App\Http\Controllers\API\PrivacyLevelController;
 use App\Http\Controllers\API\MemberPrivacyController;
 use App\Http\Controllers\API\SubscriptionController;
 use App\Http\Controllers\API\TaxSettingController;
+use App\Http\Controllers\API\SponsorController;
 
+Route::apiResource('sponsors', SponsorController::class);
 Route::apiResource('tax-settings', TaxSettingController::class);
 Route::apiResource('member-privacy', MemberPrivacyController::class);
 Route::apiResource('privacy-levels', PrivacyLevelController::class);
