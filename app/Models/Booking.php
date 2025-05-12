@@ -64,7 +64,7 @@ class Booking extends Model
         $invoice = EventBookingInvoice::generateInvoice($booking);
 
         // Send Invoice Email
-        Mail::to($booking->member->email)->send(new EventBookingInvoiceMail($invoice));
+        // Mail::to($booking->member->email)->send(new EventBookingInvoiceMail($invoice));
 
         return $booking;
     }
